@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+ width: 100%;
+ min-height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #f4f4f4;
+ flex-direction: column;
+}
+.password-field{
+    position: relative;
+    
+}
+.password-field input{
+    width:30rem;
+    height: 4rem;
+    padding: 1em;
+    border:0;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px rgba(0,0,0, 0.5);
+    font-size:1rem;
+    letter-spacing: 1px;
+
+}
+.password-field input::placeholder{
+    color:#292929;
+    font-weight:bold;
+}
+.password-field #toggler{
+    position:absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.log { 
+    position: absolute;
+}
+.log input{
+    width:30rem;
+    height: 4rem;
+    padding: 1em;
+    border:0;
+    background-color: blue;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px rgba(0,0,0, 0.5);
+    font-size:1rem;
+    letter-spacing: 1px;
+}
+.log input::value  {
+    color:#292929;
+    font-weight:bold;
+
+}
+    </style>
+    <script src="password.js"></script>
+</head>
+<body>
+    <form onclick="showHidePassword()">
+    <div class="password-field">
+        <input type="password" id="fakepassword" placeholder="Password">
+        <span><i id="toggler" class="far fa-eye"></i></span>
+    </div>
+    <br>
+    <div class="log">
+        <input type="button" value="login">
+       </div>
+</form>
+</body>
+</html>
